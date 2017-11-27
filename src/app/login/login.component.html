@@ -1,0 +1,7 @@
+<div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" required [(ngModel)]="name" name="name">
+    <button class="btn btn-success">Submit</button>
+  </form>
+</div>
