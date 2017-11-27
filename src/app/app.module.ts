@@ -1,44 +1,16 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import {
-    MatButtonModule, MatMenuModule, MatSnackBarModule,
-    MatToolbarModule
-} from '@angular/material';
-import { ServiceWorkerModule } from '@angular/service-worker';
-
-import { SnackBarService } from './services/snack-bar.service';
-import { WindowRef } from './windowRef';
 
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu.component';
-import { HomeComponent } from './home/home.component';
-import { NotificationService } from './services/notification.service';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [
-      MatButtonModule,
-      MatToolbarModule,
-      MatSnackBarModule,
-      MatMenuModule,
-      ServiceWorkerModule,
-      HttpClientModule,
-    CommonModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent},
-      { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
-      { path: 'external', loadChildren: '@angular-universal-serverless/external-module/release#ExternalModule'}
-    ]),
-    ServiceWorkerModule
+  declarations: [
+    AppComponent
   ],
-  declarations: [ AppComponent, HomeComponent, MenuComponent ],
-  exports: [ AppComponent ],
-  providers: [
-    WindowRef,
-    SnackBarService,
-    NotificationService
-  ]
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }

@@ -1,11 +1,11 @@
 {
-  "author": "Maciej Treder <contact@maciejtreder.com>",
-  "description": "Angular Universal boilerplate for serverless environment. Built on top of https://github.com/FrozenPandaz/ng-universal-demo",
-  "name": "angular-universal-serverless",
+  "author": "@ceepeeuk",
+  "description": "ang-chat-app for serverless environment. Built on top of https://github.com/maciejtreder/angular-universal-pwa",
+  "name": "ang-chat-app",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maciejtreder/angular-universal-serverless.git"
+    "url": "git+https://github.com/ceepeeuk/ang-chat-sls.git"
   },
   "scripts": {
     "lint": "tslint \"src/**/*.ts\"",
