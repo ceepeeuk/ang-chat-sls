@@ -14,7 +14,8 @@ module.exports = {
                 comments: false
             }, //prod
             mangle: {
-                screw_ie8: true
+                screw_ie8: true,
+                except: ['exports']
             }, //prod
             compress: {
                 screw_ie8: true,
@@ -28,7 +29,7 @@ module.exports = {
                 if_return: true,
                 join_vars: true,
                 negate_iife: false // we need this for lazy v8
-            },
+            }
         }),
         new CopyWebpackPlugin([
                 { from: 'src/manifest.json', to: './manifest.json' }

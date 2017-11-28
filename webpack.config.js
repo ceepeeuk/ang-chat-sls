@@ -14,7 +14,7 @@ module.exports = function (options, webpackOptions) {
     const configs = [];
 
       if (options.aot) {
-          console.log(`Running build for ${options.client ? 'client' : 'server'}`)
+          console.log(`Running build for ${options.client ? 'client' : 'server'}`);
       }
 
       const serverConfig = webpackMerge({}, commonPartial(options), serverPartial, {
@@ -50,5 +50,5 @@ module.exports = function (options, webpackOptions) {
           configs.push(webpackMerge({}, testPartial));
       }
   return configs;
-}
+};
 
