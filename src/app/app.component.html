@@ -17,6 +17,6 @@
     </h1>
   </div>
   <app-login *ngIf="!user" (setUser)="setUser($event)"></app-login>
-  <app-chat *ngIf="user" [user]="user" ></app-chat>
+  <app-chat *ngIf="user" [user]="user"></app-chat>
 </div>
 

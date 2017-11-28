@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { User } from './user';
 
 @Component({
@@ -7,8 +7,8 @@ import { User } from './user';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  protected title = 'super-duper-chat-app';
-  protected user: User;
+  public title = 'super-duper-chat-app';
+  public user: User;
 
   public setUser(user: User): void {
     this.user = user;

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChatComponent } from './chat.component';
+import { User } from '../user';
 
 describe('ChatComponent', () => {
   let component: ChatComponent;
@@ -16,6 +17,7 @@ describe('ChatComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ChatComponent);
     component = fixture.componentInstance;
+    component.user = new User('test');
     fixture.detectChanges();
   });
 

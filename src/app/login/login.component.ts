@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, /*OnInit,*/ Output } from '@angular/core';
 
 import { User } from '../user';
 import { NgForm } from '@angular/forms';
@@ -12,7 +12,7 @@ export class LoginComponent {// implements OnInit {
 
   @Output() public setUser: EventEmitter<User> = new EventEmitter<User>();
 
-  protected name: string = '';
+  public name: string = '';
 
   // constructor() { }
 

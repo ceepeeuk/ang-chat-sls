@@ -1,4 +1,4 @@
-service: universal-by-maciej-treder
+service: ang-chat-sls
 
 plugins:
   - serverless-apigw-binary
@@ -8,8 +8,8 @@ provider:
   runtime: nodejs6.10
   memorySize: 192
   timeout: 10
-  stage: production
-  region: eu-central-1
+  stage: dev
+  region: eu-west-2
 
 package:
   exclude:
