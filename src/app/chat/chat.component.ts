@@ -10,10 +10,16 @@ import { MqttService } from '../services/mqtt.service';
 export class ChatComponent implements OnInit {
 
   @Input() public user: User;
+  public message: string = '';
 
-  constructor(private mqttService: MqttService) { }
+  constructor(public mqttService: MqttService) { }
 
   public ngOnInit() {
     this.mqttService.connect(this.user.name);
+  }
+
+  public onSubmit() {
+    this.mqttService.publish(this.user.name, this.message);
+    this.message = '';
   }
 }

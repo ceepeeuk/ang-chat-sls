@@ -1,0 +1,6 @@
+#chat-window {
+  border: 0.2em solid lightgray;
+  padding: 1em;
+  max-height: 500px;
+  margin-top: 1em;
+}

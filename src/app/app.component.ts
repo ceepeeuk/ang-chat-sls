@@ -7,7 +7,7 @@ import { User } from './user';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  public title = 'super-duper-chat-app';
+  public title = 'chinwag';
   public user: User;
 
   public setUser(user: User): void {

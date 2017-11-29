@@ -1,1 +1,13 @@
 <h2><span>{{ user.name }}</span> chat</h2>
+<div id="message-window">
+  <form #f="ngForm" (ngSubmit)="onSubmit()" class="form-inline" novalidate>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <input type="text" class="form-control" id="message" required [(ngModel)]="message" name="message">
+      <button class="btn btn-success">Send</button>
+    </div>
+  </form>
+</div>
+<div id="chat-window" class="pre-scrollable">
+  <p *ngFor='let message of mqttService.messages'> {{message}} </p>
+</div>

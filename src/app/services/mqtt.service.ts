@@ -27,23 +27,26 @@ export class MqttService {
 
     this.client.on('connect', () => {
       this.client.subscribe('/chat');
-      this.messages.push('Successfully connected to AWS MQTT Broker!  :-)');
+      this.messages.push(`[${(new Date()).toTimeString().slice(0, 8)}] Successfully connected to AWS MQTT Broker!`);
+      console.log('Successfully connected to AWS MQTT Broker');
     });
 
     this.client.on('message', (topic, message) => {
-      this.messages.push(`${topic} => ${message}`);
+      this.messages.unshift(`[${(new Date()).toTimeString().slice(0, 8)}] ${message}`);
     });
 
     this.client.on('close', () => {
-      this.messages.push('Closed  :-(');
+      this.messages.push(`[${(new Date()).toTimeString().slice(0, 8)}] Closed`);
+      console.log('Closed');
     });
 
     this.client.on('offline', () => {
-      this.messages.push('Went offline  :-(');
+      this.messages.push(`[${(new Date()).toTimeString().slice(0, 8)}] Went offline`);
+      console.log('Went offline');
     });
   }
-  //
-  // publish(message: string) {
-  //
-  // }
+
+  public publish(name: string, message: string) {
+    this.client.publish('/chat', `${name}: ${message}`);
+  }
 }
