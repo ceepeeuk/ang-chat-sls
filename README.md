@@ -1,15 +1,9 @@
-# Angular 5 Universal Progressive Web App - starter
+# Chinwag
 ![angular-universal-PWA report](https://raw.github.com/maciejtreder/angular-universal-pwa/master/src/assets/img/lighthouse_report.png)
-### _**Star it and share with others!**_
-This repo is the boilerplate for Angular Universal (serverside rendering) applications.
+
+This repo is a simple proof of concept of using AWS IoT, based on the boilerplate for Angular Universal (serverside rendering) applications.
 It is running as a **(PWA) progressive web app** with the whole goodness of it (push messages, content caching and making it installable on the Android devices)!
 It is prepared to be easily deployed on serverless environment (like AWS Lambda).
-
-This is a great starting point for **microservices application**! Because of support for external modules, you can split your application into separate projects and combine them together when deploying!
-
-## Live demo
-[Angular Universal PWA on AWS Lambda + API Gateway](https://www.angular-universal-pwa.maciejtreder.com)
-
 
 ## What's inside?
 * PWA - content is cached and available offline, it can be also installed as native app on Android devices and Google Chrome
@@ -20,7 +14,7 @@ This is a great starting point for **microservices application**! Because of sup
 * Lazy loading modules
 * External modules (You can split your application into multiple projects and lazy-load them, [read more here](https://github.com/maciejtreder/angular-external-module))
 * Angular Material
-* Unit tests
+* *some* Unit tests
 
 
 ### Used frameworks/technologies
@@ -30,7 +24,7 @@ This is a great starting point for **microservices application**! Because of sup
 * DllPlugin (super fast reloading in development mode)
 * Sass loader
 * Serverless framework
-
+* AWS IoT
 
 ## Get Started
 ```sh
@@ -55,12 +49,6 @@ npm run server
 ```sh
 npm run build:deploy
 ```
-## To do
-* Google Cloud support
-* microservices support - make replacement eligible external module without recompiling whole app
-* [ng-http-sw-proxy (all requests done offline, are synced when app comes back online)](https://github.com/maciejtreder/ng-http-sw-proxy) - not working since Angular 5.x (more info can be found in [this issue](https://github.com/webmaxru/pwatter/issues/2))
-* e2e tests
-
 
 ## Won't implement:
 * load static content from S3 (JavaScript, styles, images):
@@ -70,5 +58,4 @@ npm run build:deploy
     * needs a lot of manual setup (cloudfront setup etc.)
 
 ## Credentials
-* Checkout my [home page](https://www.maciejtreder.com) and find out more about me
-* Built on top of [ng-universal-demo](https://github.com/FrozenPandaz/ng-universal-demo)
+* Built on top of [angular-universal-PWA report](https://raw.github.com/maciejtreder/angular-universal-pwa/master/src/assets/img/lighthouse_report.png)

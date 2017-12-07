@@ -14,14 +14,14 @@ export class MqttService {
     // set the default config object
     config.region = 'eu-west-2';
     config.credentials = new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: 'eu-west-2:9f6d021b-a5ab-433e-ab4e-bb03165cd5eb'
+      IdentityPoolId: 'eu-west-2:9f6d021b-a5ab-433e-ab4e-bb03165cd5eb '
     });
 
     this.client = AWSMqtt.connect({
       WebSocket: (window as any).WebSocket,
       region: 'eu-west-2',
       credentials: config.credentials,
-      endpoint: 'a2goqg6brfarl1.iot.eu-west-2.amazonaws.com',
+      endpoint: 'xxxxxxxxxxxxxx.iot.xx-xxxx-x.amazonaws.com',
       clientId: `mqtt-client-${name}`,
     });
 
