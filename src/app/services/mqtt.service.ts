@@ -14,7 +14,7 @@ export class MqttService {
     // set the default config object
     config.region = 'eu-west-2';
     config.credentials = new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: 'eu-west-2:9f6d021b-a5ab-433e-ab4e-bb03165cd5eb '
+      IdentityPoolId: 'xx-xxxx-x:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
     });
 
     this.client = AWSMqtt.connect({
